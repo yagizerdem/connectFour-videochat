@@ -32,6 +32,18 @@ class Database {
   getMatchQueue() {
     return this.searchMatchQueue;
   }
+  getRooms() {
+    return this.allRooms;
+  }
+  getRoomById(roomid) {
+    return this.allRooms[roomid];
+  }
+  addRoom(newRoom) {
+    this.allRooms[newRoom.roomid] = newRoom;
+  }
+  removeRoom(roomid) {
+    delete this.allRooms[roomid];
+  }
 }
 
 module.exports = { Database };

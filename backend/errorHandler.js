@@ -3,6 +3,7 @@ const { errorMessageMap } = require("./errorMessageMap");
 
 const errorHandler = (handler, socketid) => {
   const handleError = (err) => {
+    console.log(err);
     emitError(socketid, errorMessageMap[err.message.trim()]);
   };
 

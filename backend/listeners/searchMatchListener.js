@@ -1,6 +1,7 @@
 var DIcontainer;
 const { Database } = require("../db");
 const emitAppState = require("../emitters/emitAppState");
+const emitRoomid = require("../emitters/emitRoomid");
 const { matchMaking } = require("../engine/MatchMaking");
 (async () => {
   const module = await import("../DIcontainer.mjs");
